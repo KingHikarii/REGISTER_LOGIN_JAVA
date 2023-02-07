@@ -94,10 +94,16 @@ public class Main {
                        System.out.println("THE USER " + user_search + " WAS FOUNDED " + " WITHIN THE" + (i + 1) + " POSITION OF THE ARRAY!");
                        break;
                    }
-                else
+
+                   else if(i == users.length)
                    {
                        System.out.println("USER DOES NOT EXIST!");
                    }
+             //   else
+                  // {
+                       //continue;
+                    //   System.out.println("USER DOES NOT EXIST!");
+               //    }
 
                }
            }
