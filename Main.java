@@ -88,23 +88,37 @@ public class Main {
 
                for(i = 0; i < users.length; i++)
                {
-                String current_user = users[i];
-                   if(user_search.equals(current_user))
-                   {
+                   String current_user = users[i];
+                   if (user_search.equals(current_user)) {
                        System.out.println("THE USER " + user_search + " WAS FOUNDED " + " WITHIN THE" + (i + 1) + " POSITION OF THE ARRAY!");
                        break;
+                   } else if (i == users.length) {
+                       System.out.println("USER DOES NOT EXIST!");
                    }
+               }
 
+           }
+
+        else if(selection.equals("delete"))
+           {
+               System.out.println("ENTER THE USER TO BE DELETED: ");
+               String user_delete = input.nextLine();
+
+               for(i = 0; i < users.length; i++)
+               {
+                   if(user_delete.equals(users[i]))
+                   {
+                       continue;
+                   }
                    else if(i == users.length)
                    {
                        System.out.println("USER DOES NOT EXIST!");
                    }
-             //   else
-                  // {
-                       //continue;
-                    //   System.out.println("USER DOES NOT EXIST!");
-               //    }
-
+                   else
+                   {
+                       users[i] = users[i - 1];
+                       System.out.println("User has been deleted! Check the display!");
+                   }
                }
            }
         }
