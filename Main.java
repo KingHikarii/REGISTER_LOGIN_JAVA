@@ -16,8 +16,8 @@ public class Main {
            System.out.println("1. register");
            System.out.println("2. login");
            System.out.println("3. display");
-           System.out.println("4. delete");
-           System.out.println("5. search");
+           System.out.println("4. search");
+           System.out.println("5. delete");
            System.out.println("Enter a selection: ");
 
            String selection;
@@ -72,12 +72,32 @@ public class Main {
                }
 
           }
-        else if(selection.equals("Display"))
+        else if(selection.equals("display"))
            {
                System.out.println("Showing all users and passwords: ");
                for(int a = 0; a < users.length; a++)
                {
                    System.out.println("USER: " + users[a] + " " + "PASSWORD: " + passw[a]);
+
+               }
+           }
+        else if(selection.equals("search"))
+           {
+               System.out.println("ENTER USER TO BE SEARCHED: ");
+               String user_search = input.nextLine();
+
+               for(i = 0; i < users.length; i++)
+               {
+                String current_user = users[i];
+                   if(user_search.equals(current_user))
+                   {
+                       System.out.println("THE USER " + user_search + " WAS FOUNDED " + " WITHIN THE" + (i + 1) + " POSITION OF THE ARRAY!");
+                       break;
+                   }
+                else
+                   {
+                       System.out.println("USER DOES NOT EXIST!");
+                   }
 
                }
            }
