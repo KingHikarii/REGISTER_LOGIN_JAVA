@@ -12,7 +12,7 @@ public class Main {
 
         while (true)
         {
-
+            //i = 0;
            System.out.println("1. register");
            System.out.println("2. login");
            System.out.println("3. display");
@@ -75,9 +75,9 @@ public class Main {
         else if(selection.equals("display"))
            {
                System.out.println("Showing all users and passwords: ");
-               for(int a = 0; a < users.length; a++)
+               for(i = 0; i < users.length; i++)
                {
-                   System.out.println("USER: " + users[a] + " " + "PASSWORD: " + passw[a]);
+                   System.out.println("USER: " + users[i] + " " + "PASSWORD: " + passw[i]);
 
                }
            }
@@ -90,7 +90,7 @@ public class Main {
                {
                    String current_user = users[i];
                    if (user_search.equals(current_user)) {
-                       System.out.println("THE USER " + user_search + " WAS FOUNDED " + " WITHIN THE" + (i + 1) + " POSITION OF THE ARRAY!");
+                       System.out.println("THE USER " + user_search + " WAS FOUNDED " + " WITHIN THE " + (i + 1) + " POSITION OF THE ARRAY!");
                        break;
                    } else if (i == users.length) {
                        System.out.println("USER DOES NOT EXIST!");
