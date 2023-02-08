@@ -99,27 +99,30 @@ public class Main {
 
            }
 
-        else if(selection.equals("delete"))
-           {
+        else if(selection.equals("delete")) {
                System.out.println("ENTER THE USER TO BE DELETED: ");
                String user_delete = input.nextLine();
+               int k;
+               int current_location = 0;
 
-               for(i = 0; i < users.length; i++)
+               for (i = 0; i < users.length; i++)
                {
-                   if(user_delete.equals(users[i]))
+                   if (user_delete.equals(users[i]))
                    {
-                       continue;
+                       current_location = i;
+
+                       for (i = current_location; i < users.length - 1; i++)
+                       {
+                           users[i] = users[i+1];
+                       }
                    }
-                   else if(i == users.length)
-                   {
-                       System.out.println("USER DOES NOT EXIST!");
-                   }
-                   else
-                   {
-                       users[i] = users[i - 1];
-                       System.out.println("User has been deleted! Check the display!");
-                   }
+
+
+
+
                }
+               //System.out.println("This user is in position" + current_location + "of the array");
+               System.out.println("New array list is: "+users[i]);
            }
         }
 
